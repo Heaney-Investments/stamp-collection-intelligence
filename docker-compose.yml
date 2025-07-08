@@ -1,0 +1,74 @@
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: stamp-collection-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGODB_DATABASE}
+      MONGODB_APP_USERNAME: ${MONGODB_APP_USERNAME}
+      MONGODB_APP_PASSWORD: ${MONGODB_APP_PASSWORD}
+      MONGODB_USER_USERNAME: ${MONGODB_USER_USERNAME}
+      MONGODB_USER_PASSWORD: ${MONGODB_USER_PASSWORD}
+    volumes:
+      - mongodb_data:/data/db
+      - ./data/mongo-init:/docker-entrypoint-initdb.d
+    networks:
+      - stamp-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+    command: mongod --auth --bind_ip_all
+
+  redis:
+    image: redis:7.2-alpine
+    container_name: stamp-collection-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}
+    volumes:
+      - redis_data:/data
+    networks:
+      - stamp-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 30s
+      timeout: 3s
+      retries: 5
+
+  # Optional: MongoDB Express for database management
+  mongo-express:
+    image: mongo-express:latest
+    container_name: stamp-collection-mongo-express
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGODB_ROOT_USERNAME}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGODB_ROOT_PASSWORD}
+      ME_CONFIG_MONGODB_URL: mongodb://${MONGODB_ROOT_USERNAME}:${MONGODB_ROOT_PASSWORD}@mongodb:27017/
+      ME_CONFIG_MONGODB_AUTH_DATABASE: ${MONGODB_AUTH_SOURCE}
+      ME_CONFIG_BASICAUTH_USERNAME: ${MONGO_EXPRESS_USERNAME}
+      ME_CONFIG_BASICAUTH_PASSWORD: ${MONGO_EXPRESS_PASSWORD}
+      ME_CONFIG_SITE_BASEURL: /mongo-express/
+    depends_on:
+      - mongodb
+    networks:
+      - stamp-network
+
+volumes:
+  mongodb_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  stamp-network:
+    driver: bridge

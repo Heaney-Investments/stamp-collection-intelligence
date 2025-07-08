@@ -1,0 +1,24 @@
+/* Dashboard component styles */
+.dashboard {
+  padding: 2rem;
+  margin-top: 80px; /* Account for fixed navbar */
+}
+
+.dashboard h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

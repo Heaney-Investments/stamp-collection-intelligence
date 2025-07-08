@@ -1,0 +1,85 @@
+{
+  "name": "stamp-collection-intelligence",
+  "version": "1.0.0",
+  "description": "AI-Powered Stamp Collection Intelligence Platform - Desktop Application",
+  "main": "src/main.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently \"npm run start\" \"npm run renderer:dev\"",
+    "build": "npm run renderer:build && electron-builder",
+    "renderer:dev": "cd renderer && npm start",
+    "renderer:build": "cd renderer && npm run build",
+    "postinstall": "electron-builder install-app-deps",
+    "setup:all": "npm install && cd renderer && npm install",
+    "test": "jest",
+    "lint": "eslint src/ renderer/src/",
+    "mongodb:start": "mongod --dbpath ./data/db",
+    "redis:start": "redis-server",
+    "services:start": "concurrently \"npm run mongodb:start\" \"npm run redis:start\"",
+    "app:full": "concurrently \"npm run services:start\" \"npm run dev\""
+  },
+  "keywords": [
+    "stamp",
+    "collection",
+    "AI",
+    "ebay",
+    "wix",
+    "mongodb",
+    "redis",
+    "electron",
+    "desktop"
+  ],
+  "author": "WPP Ecommerce Tool",
+  "license": "MIT",
+  "build": {
+    "appId": "com.wpp.stamp-collection",
+    "productName": "Stamp Collection Intelligence",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "renderer/build/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "electron": "^28.3.3",
+    "electron-builder": "^24.9.1",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ebay-api": "^7.0.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "multer": "^1.4.5-lts.1",
+    "node-schedule": "^2.1.1",
+    "openai": "^4.24.7",
+    "opencv4nodejs": "^5.6.0",
+    "redis": "^4.6.12",
+    "sharp": "^0.33.2",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0"
+  }
+}
