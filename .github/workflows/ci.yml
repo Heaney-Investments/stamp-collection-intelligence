@@ -27,7 +27,7 @@ jobs:
           cache: 'npm'
 
       - name: Cache node modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.npm
@@ -94,7 +94,7 @@ jobs:
           cache: 'npm'
 
       - name: Cache node modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.npm
@@ -158,7 +158,7 @@ jobs:
           cache: 'npm'
 
       - name: Cache Electron
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ env.ELECTRON_CACHE }}
           key: ${{ runner.os }}-electron-cache-${{ hashFiles('**/package-lock.json') }}
@@ -166,7 +166,7 @@ jobs:
             ${{ runner.os }}-electron-cache-
 
       - name: Cache Electron Builder
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ env.ELECTRON_BUILDER_CACHE }}
           key: ${{ runner.os }}-electron-builder-cache-${{ hashFiles('**/package-lock.json') }}
