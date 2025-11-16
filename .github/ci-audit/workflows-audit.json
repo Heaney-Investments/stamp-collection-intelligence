@@ -1,0 +1,218 @@
+{
+  "repo": "Heaney-Investments/stamp-collection-intelligence",
+  "failedRunsCount": 151,
+  "topFailedRuns": [
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19399064780",
+      "createdAt": "2025-11-16T02:31:01Z",
+      "databaseId": 19399064780
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19383006895",
+      "createdAt": "2025-11-15T02:27:57Z",
+      "databaseId": 19383006895
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19352338696",
+      "createdAt": "2025-11-14T02:29:36Z",
+      "databaseId": 19352338696
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19318540514",
+      "createdAt": "2025-11-13T02:30:10Z",
+      "databaseId": 19318540514
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19284410078",
+      "createdAt": "2025-11-12T02:29:23Z",
+      "databaseId": 19284410078
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19252938990",
+      "createdAt": "2025-11-11T02:29:48Z",
+      "databaseId": 19252938990
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19227781491",
+      "createdAt": "2025-11-10T10:00:54Z",
+      "databaseId": 19227781491
+    },
+    {
+      "name": "Continuous Integration",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19227781476",
+      "createdAt": "2025-11-10T10:00:54Z",
+      "databaseId": 19227781476
+    },
+    {
+      "name": "Continuous Integration",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19227776146",
+      "createdAt": "2025-11-10T10:00:43Z",
+      "databaseId": 19227776146
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19227776144",
+      "createdAt": "2025-11-10T10:00:43Z",
+      "databaseId": 19227776144
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19218736906",
+      "createdAt": "2025-11-10T02:30:45Z",
+      "databaseId": 19218736906
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19202074724",
+      "createdAt": "2025-11-09T02:30:07Z",
+      "databaseId": 19202074724
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19186570792",
+      "createdAt": "2025-11-08T02:26:37Z",
+      "databaseId": 19186570792
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19156252098",
+      "createdAt": "2025-11-07T02:28:57Z",
+      "databaseId": 19156252098
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19122858288",
+      "createdAt": "2025-11-06T02:29:53Z",
+      "databaseId": 19122858288
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19089326033",
+      "createdAt": "2025-11-05T02:29:48Z",
+      "databaseId": 19089326033
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19055833755",
+      "createdAt": "2025-11-04T02:29:17Z",
+      "databaseId": 19055833755
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19022184177",
+      "createdAt": "2025-11-03T02:30:42Z",
+      "databaseId": 19022184177
+    },
+    {
+      "name": "Security Audit",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19006095273",
+      "createdAt": "2025-11-02T02:30:50Z",
+      "databaseId": 19006095273
+    },
+    {
+      "name": "docker in /. - Update #1140312431",
+      "url": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/18994656343",
+      "createdAt": "2025-11-01T09:18:50Z",
+      "databaseId": 18994656343
+    }
+  ],
+  "longestJobs": [
+    {
+      "runUrl": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19227781476",
+      "jobName": "Run Tests",
+      "durationMinutes": 0.82,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "conclusion": "failure"
+    },
+    {
+      "runUrl": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19227776146",
+      "jobName": "Run Tests",
+      "durationMinutes": 0.77,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "conclusion": "failure"
+    },
+    {
+      "runUrl": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19122858288",
+      "jobName": "Security Audit",
+      "durationMinutes": 0.52,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "conclusion": "failure"
+    },
+    {
+      "runUrl": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19318540514",
+      "jobName": "Security Audit",
+      "durationMinutes": 0.5,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "conclusion": "failure"
+    },
+    {
+      "runUrl": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19186570792",
+      "jobName": "Security Audit",
+      "durationMinutes": 0.48,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "conclusion": "failure"
+    },
+    {
+      "runUrl": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19022184177",
+      "jobName": "Security Audit",
+      "durationMinutes": 0.48,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "conclusion": "failure"
+    },
+    {
+      "runUrl": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19284410078",
+      "jobName": "Security Audit",
+      "durationMinutes": 0.47,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "conclusion": "failure"
+    },
+    {
+      "runUrl": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19399064780",
+      "jobName": "Security Audit",
+      "durationMinutes": 0.45,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "conclusion": "failure"
+    },
+    {
+      "runUrl": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19227781491",
+      "jobName": "Security Audit",
+      "durationMinutes": 0.45,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "conclusion": "failure"
+    },
+    {
+      "runUrl": "https://github.com/Heaney-Investments/stamp-collection-intelligence/actions/runs/19202074724",
+      "jobName": "Security Audit",
+      "durationMinutes": 0.45,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "conclusion": "failure"
+    }
+  ]
+}
